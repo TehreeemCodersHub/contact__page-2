@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+:root {
+  --primary-color: #3bb7ad;
+  --secondary-color: #1e6db2;
+  --heading-color: #231f20;
+  --para-color: #2f2f30;
+  --black-color: #000;
+  --white-color: #fff;
+  --mulish-font-family: "Mulish", sans-serif;
+  --nunito-font-family: "Nunito", sans-serif;
+}
+.clrPrime {
+  color: var(--primary-color) !important;
+}
+.bg-clrPrime {
+  background-color: var(--primary-color) !important;
+}
+.clrSecondary {
+  color: var(--secondary-color) !important;
+}
+.bg-clrSecondary {
+  background-color: var(--secondary-color) !important;
+}
+/* Heading font families */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--mulish-font-family);
+  color: var(--heading-color);
+}
+p,
+a,
+span {
+  color: var(--para-color);
+  font-family: var(--nunito-font-family);
+}
+
+/* Button Styling */
+.acube_btn {
+  padding: 14px 25px;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+  z-index: 0;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid;
+}
+.acube_btn::before,
+.acube_btn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.acube_btn::before {
+  z-index: -2;
+}
+.acube_btn::before {
+  background-color: var(--primary-color);
+}
+.acube_btn::after {
+  background-color: var(--heading-color);
+}
+.acube_btn::after {
+  width: 140%;
+  left: -20%;
+  z-index: -1;
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: skew(-35deg) scaleX(0);
+  -ms-transform: skew(-35deg) scaleX(0);
+  transform: skew(-35deg) scaleX(0);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.acube_btn:hover {
+  color: #fff !important;
+}
+.acube_btn:hover::after {
+  -webkit-transform: skew(-35deg) scaleX(1);
+  -ms-transform: skew(-35deg) scaleX(1);
+  transform: skew(-35deg) scaleX(1);
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 112, 244, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 5px 12px rgba(0, 112, 244, 0);
+  }
+}
+
+/* Button Dark */
+.acube_btn_dark::before {
+  background-color: var(--secondary-color);
+}
+.acube_btn_dark {
+  border-color: var(--secondary-color);
+  animation: pulse-animation 2s infinite;
+}
+.acube_btn_dark:hover {
+  border-color: var(--primary-color);
+}
+.acube_btn_dark::after {
+  background-color: var(--primary-color);
+}
+
+/* Button Light */
+.acube_btn_light::before {
+  background-color: transparent;
+}
+.acube_btn_light {
+  border-color: var(--white-color);
+}
+.acube_btn_light:hover {
+  border-color: var(--primary-color);
+  animation: pulse-animation 2s infinite;
+}
+.acube_btn_light::after {
+  background-color: var(--primary-color);
+}
+
+/* H1 Heading Start */
+.acube_h1 {
+  font-weight: 700;
+  font-size: 5em;
+  line-height: 1em;
+  letter-spacing: -0.05em;
+}
+/* H1 Heading End */
+/* H2 Heading Start */
+.acube_h2 {
+  font-weight: 600;
+  font-size: 3em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+}
+/* H2 Heading End */
+/* H3 Heading / Subheading Start/  */
+.subheading {
+  font-weight: 400;
+  font-size: 1.5em;
+  line-height: 0.94em;
+  letter-spacing: -0.05em;
+}
+/* H3 Heading/ Subheading End */
+/* Paragraph Start */
+.acube_para {
+  font-size: 1.2em;
+  color: var(--text-para);
+  line-height: 1.9rem;
+  letter-spacing: -0.05em;
+  word-spacing: 0.1rem;
+}
+/* Paragraph End */
+/* *
+**
+*****
+********
+***********
+**************
+Start Your Own Styling
+**************
+***********
+********
+*****
+**
+* */
+
+/*contact form css */
+
+/* Upper section css */
+.main__section {
+  padding-top: 2.57rem;
+  padding-bottom: 3.55rem;
+  width: 100%;
+
+  background-color: #f5f6fa;
+}
+.main__section .hero-container {
+  padding-top: 5.52rem;
+}
+.headline-text {
+  color: var(--secondary-color);
+}
+
+/* upper section 1st row right column css */
+.contacts__decorations {
+  position: relative;
+  top: 0px;
+  left: 0%;
+  transform: none;
+}
+.contacts__animoji-list {
+  z-index: 1;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* emoji css */
+.animoji {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* emoji_1 css */
+.contacts__animoji-wrapper--1 {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(50px - 41px) !important;
+  right: calc(50px - 15px);
+}
+.animoji--circle-1 {
+  background-color: #b6ff40;
+}
+
+/* emoji_2 css */
+.contacts__animoji-wrapper--2 {
+  position: absolute;
+  /* bottom: 50px; */
+  z-index: 2;
+  left: calc(50px - 14px);
+  top: calc(50px - 75px);
+}
+.animoji--circle-2 {
+  background-color: #2657e8;
+}
+
+/* emoji_3 css */
+.contacts__animoji-wrapper--3 {
+  position: absolute;
+  transform: rotate(21deg);
+  top: calc(50px + -23px);
+  z-index: 2;
+  /* right: calc(50px + 25px); */
+  right: calc(50px + -64px);
+}
+
+.animoji--circle-3 {
+  background-color: #822eff;
+}
+/* emoji line css */
+.contacts__animoji-line {
+  position: absolute;
+  transform: rotate(-4deg);
+  bottom: calc(50px - 253px);
+  right: calc(50px + -98px);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.contacts__animoji-line img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* upper container 2nd row css left side */
+.contacts__link-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact__link-text {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+.contact__link-text .inner-text {
+  font-weight: 400px;
+  font-family: var(--mulish-font-family);
+}
+.contacts__social-media-wrapper {
+  width: 75%;
+  background: black;
+  border-radius: 15px;
+}
+.contacts__social-media-heading {
+  color: rgb(98, 87, 232);
+}
+
+/* lower section css */
+.contact__wrapper-lower {
+  padding-top: 5.52rem;
+  padding-bottom: 5.52rem;
+}
+.form__containter {
+  background-color: var(--secondary-color);
+}
+/* form input styling */
+.input-label {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--mulish-font-family);
+  font-weight: 200px;
+}
+.special-color {
+  color: black;
+  font-family: var(--mulish-font-family);
+  font-weight: 200px;
+}
+.input {
+  width: 100%;
+  height: 3.95rem;
+  border-radius: 12px;
+  border-color: transparent;
+}
+input[type="text"]::-webkit-input-placeholder {
+  color: #bdbdbf;
+}
+
+.input--textarea {
+  width: 100%;
+  height: 9.95rem;
+  border-radius: 12px;
+  border-color: transparent;
+}
+.anchor-color {
+  color: var(--primary-color);
+}
+.largerCheckbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+}
+
+/* doing responsive the website */
+
+/* media query for large screen */
+
+@media only screen and (max-width: 1235px) and (min-width: 992px) {
+  .acube_h1 {
+    font-weight: 700;
+    font-size: 3.98em;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+  }
+  .contacts__animoji-line {
+    /*   
+      position: absolute;
+      transform: rotate(0deg);
+      bottom: calc(50px - 253px);
+      right: calc(50px + -98px);
+      overflow-x: hidden;
+      width: 100%; */
+
+    /* position: absolute;
+        transform: rotate(0deg);
+        bottom: calc(50px - 253px);
+        right: calc(50px + -81px);
+        overflow-x: hidden;
+        width: 100%; */
+
+    position: absolute;
+    transform: rotate(2deg);
+    bottom: calc(50px - 244px);
+    right: calc(50px + -76px);
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .contacts__animoji-wrapper--3 {
+    position: absolute;
+    transform: rotate(24deg);
+    top: calc(50px + -37px);
+    z-index: 2;
+    /* right: calc(50px + 25px); */
+    /* right: calc(50px + -52px); */
+    right: calc(50px + -34px);
+  }
+  .contacts__animoji-line img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .animoji {
+    width: 6.7rem;
+    height: 6.7rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts__social-media-wrapper {
+    width: 75%;
+    background: black;
+    border-radius: 15px;
+  }
+}
+
+/* now working for medium screen */
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  .acube_h1 {
+    font-weight: 700;
+    font-size: 3.55em;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+  }
+  .contacts__animoji-line {
+    /*   
+      position: absolute;
+      transform: rotate(0deg);
+      bottom: calc(50px - 253px);
+      right: calc(50px + -98px);
+      overflow-x: hidden;
+      width: 100%; */
+
+    position: absolute;
+    transform: rotate(1deg);
+    bottom: calc(50px - 209px);
+    right: calc(50px + -84px);
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .contacts__animoji-wrapper--3 {
+    position: absolute;
+    transform: rotate(24deg);
+    top: calc(50px + -29px);
+    z-index: 2;
+    /* right: calc(50px + 25px); */
+    /* right: calc(50px + -52px); */
+    right: calc(50px + -51px);
+  }
+
+  .contacts__animoji-line img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .animoji {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts__social-media-wrapper {
+    width: 75%;
+    background: black;
+    border-radius: 15px;
+  }
+  .contacts__social-media-wrapper {
+    width: 90%;
+    background: black;
+    border-radius: 15px;
+  }
+}
+
+/* media query for small screen */
+@media (max-width: 767px) {
+  .acube_h1 {
+    font-weight: 700;
+    font-size: 3.55em;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+  }
+
+  .contacts__social-media-wrapper {
+    width: 40% !important;
+    background: black;
+    border-radius: 15px;
+  }
+
+  .contacts__decorations {
+    height: 400px;
+  }
+
+  .contacts__animoji-wrapper--1 {
+    position: absolute;
+    z-index: 2;
+    bottom: calc(50px - -171px) !important;
+    right: calc(50px - -96px);
+  }
+
+  .animoji--circle-1 {
+    background-color: #b6ff40;
+  }
+
+  /* emoji_2 css */
+  .contacts__animoji-wrapper--2 {
+    position: absolute;
+    /* bottom: 50px; */
+    z-index: 2;
+    left: calc(50px - -59px);
+    top: calc(50px - -130px);
+    transform: rotate(-23deg);
+  }
+
+  .contacts__animoji-line {
+    position: absolute;
+    transform: rotate(0deg);
+    bottom: calc(50px - 50px);
+    right: calc(50px + 34px);
+    overflow-x: hidden;
+    width: 70%;
+  }
+
+  .contacts__animoji-wrapper--3 {
+    position: absolute;
+    transform: rotate(10deg);
+    top: calc(50px + 164px);
+    z-index: 2;
+
+    right: calc(50px + 100px);
+  }
+
+  .contacts__animoji-line img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .animoji {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts__social-media-wrapper {
+    width: 75%;
+    background: black;
+    border-radius: 15px;
+  }
+
+  .contacts__social-media-wrapper {
+    width: 90%;
+    background: black;
+    border-radius: 15px;
+  }
+}
